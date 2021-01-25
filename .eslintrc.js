@@ -9,6 +9,7 @@ module.exports = {
     'plugin:vue/vue3-essential',
     'plugin:prettier/recommended',
     '@vue/typescript/recommended',
+    'node',
     '@vue/airbnb',
     '@vue/prettier',
     '@vue/prettier/@typescript-eslint',
