@@ -11,14 +11,16 @@ app.use(express.urlencoded({ extended: true }))
 app.use(serveStatic(`${__dirname}/dist`))
 
 // CORSの許可
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*')
-  res.header(
-    'Access-Control-Allow-Headers',
-    'Origin, X-Requested-With, Content-Type, Accept',
-  )
-  next()
-})
+app.use(
+  (req: express.Request, res: express.Response, next: express.NextFunction) => {
+    res.header('Access-Control-Allow-Origin', '*')
+    res.header(
+      'Access-Control-Allow-Headers',
+      'Origin, X-Requested-With, Content-Type, Accept',
+    )
+    next()
+  },
+)
 
 // GetとPostのルーティング
 const router: express.Router = express.Router()
