@@ -6,13 +6,13 @@ module.exports = {
   },
   plugins: ['vue', 'prettier'],
   extends: [
-    'plugin:vue/vue3-essential',
-    'plugin:prettier/recommended',
-    '@vue/typescript/recommended',
     'node',
     '@vue/airbnb',
-    '@vue/prettier',
+    'plugin:vue/vue3-essential',
+    '@vue/typescript/recommended',
     '@vue/prettier/@typescript-eslint',
+    'plugin:prettier/recommended',
+    '@vue/prettier',
   ],
   parserOptions: {
     ecmaVersion: 2020,
